@@ -6,6 +6,20 @@ Repositorio del taller para construir una solución de conciliación contable co
 
 Este README centraliza el instructivo del taller y la navegación de toda la documentación generada.
 
+## Requisito Previo: Cuenta de GitHub Copilot
+Aplica a todos los participantes del taller, tanto del frente IBM i como del frente Sistemas Abiertos.
+
+- Guía obligatoria para activar GitHub Copilot Free:
+  - [Guias/Guia_GitHubCopilot.md](Guias/Guia_GitHubCopilot.md)
+
+Reglas obligatorias para la cuenta:
+- La cuenta debe ser **personal**, no corporativa.
+- **NO se permite usar correo corporativo** para el registro. Debe ser un correo personal (Gmail, Outlook, iCloud u otro proveedor personal).
+- Los correos corporativos suelen tener políticas que bloquean el dominio de GitHub o impiden activar Copilot Free, lo que invalida el acceso para el taller.
+- La cuenta es individual e intransferible; no se permite compartir credenciales entre participantes.
+- Cada participante es responsable de mantener activa su cuenta durante toda la duración del taller.
+- Este taller debe realizarse de manera local, no se permite credenciales o ambientes del BAC.
+
 ## 1. Objetivo del Taller
 - Definir y documentar el modelo de datos de conciliación en IBM i.
 - Diseñar el contrato JSON de salida para conciliación.
@@ -30,6 +44,9 @@ Este README centraliza el instructivo del taller y la navegación de toda la doc
 │   │   └── diseno_dashboard_sistemas_abiertos.md
 │   └── Requerimientos/
 │       └── requerimientos_sistemas_abiertos.md
+├── Guias/
+│   ├── Guia_GitHubCopilot_CuentaGratuita.md
+│   └── Guia_PUB400_CrearCuenta.md
 ├── Reglas/
 │   ├── Revision_IBMi.md
 │   └── Revision_SistemasAbiertos.md
@@ -48,6 +65,14 @@ Este README centraliza el instructivo del taller y la navegación de toda la doc
   - [Documentacion_IBMi/Codigo_Ejemplos/EjemploJSON.sql](Documentacion_IBMi/Codigo_Ejemplos/EjemploJSON.sql)
   - [Documentacion_IBMi/Codigo_Ejemplos/GrabaIFS.sql](Documentacion_IBMi/Codigo_Ejemplos/GrabaIFS.sql)
   - [Documentacion_IBMi/Codigo_Ejemplos/PracticaJSON.sql](Documentacion_IBMi/Codigo_Ejemplos/PracticaJSON.sql)
+- Guía obligatoria para acceso al servidor IBM i (PUB400):
+  - [Guias/Guia_PUB400.md](Guias/Guia_PUB400.md)
+  - Antes de iniciar el desarrollo en IBM i, cada participante debe crear su propio usuario gratuito en PUB400 e instalar IBM i Access Client Solutions. Sin esto no es posible ejecutar los entregables del frente IBM i.
+  - Implicaciones del uso del servidor:
+    - El usuario es individual, no se comparte entre participantes.
+    - Se trabaja con autoridad `*PGMR` y librerías personales asignadas por PUB400.
+    - El servicio es gratuito, sin soporte oficial y sin backup de datos.
+    - No se permiten objetos PF/LF; solo tablas y vistas SQL.
 
 ### 3.2 Sistemas Abiertos
 - Requerimientos de solución (backend, frontend, integración y calidad):
