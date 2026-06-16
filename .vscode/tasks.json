@@ -26,9 +26,15 @@
     {
       "label": "TOBi: Build All (makei build)",
       "type": "shell",
-      "command": "makei",
+      "command": "ssh",
       "args": [
-        "build"
+        "-p",
+        "2222",
+        "LANUZACX@pub400.com",
+        "cd /home/LANUZACX/NovaSorc && makei build"
+      ],
+      "dependsOn": [
+        "PUB400: Deploy IBM i Sources"
       ],
       "group": {
         "kind": "build",
@@ -43,16 +49,20 @@
       "problemMatcher": [
         "$ibmi"
       ],
-      "detail": "Build all programs, modules, service programs, and database objects using TOBi"
+      "detail": "Deploy the project sources to PUB400 and run makei build in /home/LANUZACX/NovaSorc."
     },
     {
       "label": "TOBi: Build Programs Only (GLBLN_BATCH.PGM)",
       "type": "shell",
-      "command": "makei",
+      "command": "ssh",
       "args": [
-        "b",
-        "-t",
-        "GLBLN_BATCH.PGM"
+        "-p",
+        "2222",
+        "LANUZACX@pub400.com",
+        "cd /home/LANUZACX/NovaSorc && makei b -t GLBLN_BATCH.PGM"
+      ],
+      "dependsOn": [
+        "PUB400: Deploy IBM i Sources"
       ],
       "group": "build",
       "presentation": {
@@ -63,16 +73,20 @@
       "problemMatcher": [
         "$ibmi"
       ],
-      "detail": "Build GLBLN_BATCH.PGM and its program dependencies through TOBi"
+      "detail": "Deploy the project sources to PUB400 and build GLBLN_BATCH.PGM through TOBi."
     },
     {
       "label": "TOBi: Build Libraries/Service Programs (NOVA.SRVPGM)",
       "type": "shell",
-      "command": "makei",
+      "command": "ssh",
       "args": [
-        "b",
-        "-t",
-        "NOVA.SRVPGM"
+        "-p",
+        "2222",
+        "LANUZACX@pub400.com",
+        "cd /home/LANUZACX/NovaSorc && makei b -t NOVA.SRVPGM"
+      ],
+      "dependsOn": [
+        "PUB400: Deploy IBM i Sources"
       ],
       "group": "build",
       "presentation": {
@@ -83,16 +97,20 @@
       "problemMatcher": [
         "$ibmi"
       ],
-      "detail": "Build service program NOVA.SRVPGM and its module dependencies through TOBi"
+      "detail": "Deploy the project sources to PUB400 and build service program NOVA.SRVPGM through TOBi."
     },
     {
       "label": "TOBi: Build Database Objects (Databases)",
       "type": "shell",
-      "command": "makei",
+      "command": "ssh",
       "args": [
-        "b",
-        "-d",
-        "."
+        "-p",
+        "2222",
+        "LANUZACX@pub400.com",
+        "cd /home/LANUZACX/NovaSorc && makei b -d ."
+      ],
+      "dependsOn": [
+        "PUB400: Deploy IBM i Sources"
       ],
       "group": "build",
       "presentation": {
@@ -103,7 +121,7 @@
       "problemMatcher": [
         "$ibmi"
       ],
-      "detail": "Create SQL DDL objects and dependent project objects through TOBi"
+      "detail": "Deploy the project sources to PUB400 and create SQL DDL objects through TOBi."
     },
     {
       "label": "TOBi: Clean Objects (manual CL)",
@@ -124,9 +142,15 @@
     {
       "label": "TOBi: Rebuild (makei build)",
       "type": "shell",
-      "command": "makei",
+      "command": "ssh",
       "args": [
-        "build"
+        "-p",
+        "2222",
+        "LANUZACX@pub400.com",
+        "cd /home/LANUZACX/NovaSorc && makei build"
+      ],
+      "dependsOn": [
+        "PUB400: Deploy IBM i Sources"
       ],
       "group": "build",
       "presentation": {
@@ -137,14 +161,14 @@
       "problemMatcher": [
         "$ibmi"
       ],
-      "detail": "Run a full TOBi build. Destructive cleanup is no longer defined as a phony Rules.mk target."
+      "detail": "Deploy the project sources to PUB400 and run a full TOBi build."
     },
     {
       "label": "TOBi: Show Build Configuration",
       "type": "shell",
       "command": "echo",
       "args": [
-        "Library: LANUZACX2; Binder Directory: NOVABND; IFS: /home/LANUZACX/NovaSorc; Build: makei build; Object build: makei b -t {object}"
+        "Library: LANUZACX2; Binder Directory: NOVABND; IFS: /home/LANUZACX/NovaSorc; Build: ssh PUB400 makei build; Object build: ssh PUB400 makei b -t {object}"
       ],
       "group": "build",
       "presentation": {
@@ -199,6 +223,7 @@
       "args": [
         "-P",
         "2222",
+        "-r",
         "${workspaceFolder}/Rules.mk",
         "${workspaceFolder}/Programs/GLBLN_RECON.SQLRPGLE",
         "${workspaceFolder}/Programs/JSON_OUTPUT.SQLRPGLE",
