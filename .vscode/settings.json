@@ -1,0 +1,34 @@
+{
+  "terminal.integrated.env.windows": {
+    "PATH": "C:\\Users\\clanuza\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\clanuza\\AppData\\Local\\Programs\\Python\\Python312\\Scripts;C:\\Users\\clanuza\\.local\\bin;${env:PATH}"
+  },
+  "python.defaultInterpreterPath": "C:\\Users\\clanuza\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+  "IBM i Debug.updateProductionFiles": false,
+  "IBM i Debug.enableDebugTracing": false,
+  "IBM i Testing.productLibrary": "RPGUNIT",
+  "IBM i Testing.testSourceFiles": [
+    "QTESTSRC"
+  ],
+  "IBM i Testing.testStubPreferences": {
+    "Show Test Stub Preview": true,
+    "Test Source File": "QTESTSRC",
+    "Test Source Directory": "qtestsrc",
+    "Prompt For Test Name": false,
+    "Generate Default Test Configuration": true,
+    "Add Control Options and Directives": true,
+    "Add Includes": true,
+    "Add Prototypes": true,
+    "Add Stub Comments": false
+  },
+  "IBM i Testing.libraryListValidation": {
+    "RPGUNIT": true,
+    "QDEVTOOLS": true
+  },
+  "IBM i Testing.runOrder": "*API",
+  "IBM i Testing.libraryList": "*CURRENT",
+  "IBM i Testing.jobDescription": "*DFT",
+  "IBM i Testing.reportDetail": "*BASIC",
+  "IBM i Testing.createReport": "*ALLWAYS",
+  "IBM i Testing.reclaimResources": "*NO",
+  "IBM i Testing.onFailure": "*ABORT"
+}
