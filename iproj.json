@@ -1,3 +1,7 @@
 {
-  "description": "TallerGithub4IBMi"
+  "description": "TallerGithub4IBMi",
+  "preUsrlibl": [
+    "LANUZACX2"
+  ],
+  "curlib": "&CURLIB"
 }
