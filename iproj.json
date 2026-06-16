@@ -1,7 +1,44 @@
 {
-  "description": "TallerGithub4IBMi",
+  "description": "TallerGitHub - conciliacion contable para IBM i y sistemas abiertos",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": "https://github.com/clanuzau/TallerGitHub.git",
+  "objlib": "LANUZACX2",
+  "curlib": "LANUZACX2",
   "preUsrlibl": [
-    "LANUZACX2"
+    "LANUZACX2",
+    "QGPL",
+    "QTEMP",
+    "GAMES400"
   ],
-  "curlib": "&CURLIB"
+  "postUsrlibl": [],
+  "includePath": [
+    "Databases",
+    "Documentacion_IBMi/Codigo_Ejemplos"
+  ],
+  "setIBMiEnvCmd": [
+    "CHGJOB CCSID(37)"
+  ],
+  "buildSystem": "tobi",
+  "buildSystemVersion": "3.3.0",
+  "buildCommand": "makei build",
+  "sourceFileExtensions": [
+    "sqlrpgle",
+    "rpgle",
+    "clle",
+    "sql",
+    "dspf",
+    "prtf"
+  ],
+  "compileOptions": {
+    "sqlrpgle": "OPTION(*EVENTF) DBGVIEW(*SOURCE) COMMIT(*NONE) CVTCCSID(*JOB)",
+    "rpgle": "DATFMT(*ISO) TIMFMT(*ISO) DBGVIEW(*SOURCE)",
+    "clle": "OPTION(*EVENTF) DBGVIEW(*SOURCE)"
+  },
+  "binderDirectory": "NOVABND",
+  "activationGroup": "NOVA",
+  "author": "Cesar Lanuza",
+  "team": "Novacomp",
+  "buildObjectCommand": "makei b -t {object}",
+  "compileCommand": "makei compile -f {filename}"
 }
