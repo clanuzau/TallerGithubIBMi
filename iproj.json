@@ -14,7 +14,8 @@
   "postUsrlibl": [],
   "includePath": [
     "Databases",
-    "Documentacion_IBMi/Codigo_Ejemplos"
+    "Documentacion_IBMi/Codigo_Ejemplos",
+    "/home/LANUZACX/builds/TallerGithubIBMi"
   ],
   "setIBMiEnvCmd": [
     "CHGJOB CCSID(37)"
