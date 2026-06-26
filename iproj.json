@@ -18,7 +18,8 @@
     "/home/LANUZACX/builds/TallerGithubIBMi"
   ],
   "setIBMiEnvCmd": [
-    "CHGJOB CCSID(37)"
+    "CHGJOB CCSID(37)",
+    "CHGCURLIB LANUZACX2"
   ],
   "buildSystem": "tobi",
   "buildSystemVersion": "3.3.0",
@@ -32,6 +33,7 @@
     "prtf"
   ],
   "compileOptions": {
+    "sql": "COMMIT(*NONE) NAMING(*SYS) DFTRDBCOL(LANUZACX2)",
     "sqlrpgle": "OPTION(*EVENTF) DBGVIEW(*SOURCE) COMMIT(*NONE) CVTCCSID(*JOB)",
     "rpgle": "DATFMT(*ISO) TIMFMT(*ISO) DBGVIEW(*SOURCE)",
     "clle": "OPTION(*EVENTF) DBGVIEW(*SOURCE)"
