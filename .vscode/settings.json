@@ -1,4 +1,10 @@
 {
+  "code-for-ibmi.connectionSettings": [
+    {
+      "host": "pub400.com",
+      "defaultSchema": "LANUZACX2"
+    }
+  ],
   "terminal.integrated.env.windows": {
     "PATH": "C:\\Users\\clanuza\\AppData\\Local\\Programs\\Python\\Python312;C:\\Users\\clanuza\\AppData\\Local\\Programs\\Python\\Python312\\Scripts;C:\\Users\\clanuza\\.local\\bin;${env:PATH}"
   },

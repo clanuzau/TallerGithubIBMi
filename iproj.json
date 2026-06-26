@@ -43,5 +43,5 @@
   "author": "Cesar Lanuza",
   "team": "Novacomp",
   "buildObjectCommand": "makei b -t {object}",
-  "compileCommand": "makei compile -f {filename}"
+  "compileCommand": "system \"RUNSQLSTM SRCSTMF('{filename}') COMMIT(*NONE) NAMING(*SYS) DFTRDBCOL(LANUZACX2)\""
 }
